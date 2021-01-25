@@ -1,10 +1,6 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+import Typography from '@material-ui/core/Typography';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,37 +26,41 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const tileData = [
-    {
-        img: 'images/Queens-Gambit.jpg',
-        title: 'Queens-Gambit',
-        author: 'jill111',
-        cols: 2,
-        featured: true,
-    },
-    {
-        img: 'images/spy.jpg',
-        title: 'The Spy',
-        author: 'director90',
-    },
-    {
-        img: 'images/suits.jpg',
-        title: 'Suits',
-        author: 'Danson67',
-    },
-    {
-        img: 'images/Vikings.jpeg',
-        title: 'Vikings',
-        author: 'fancycrave1',
-        featured: true,
-    }
-];
+// const tileData = [
+//     {
+//         img: 'images/Queens-Gambit.jpg',
+//         title: 'Queens-Gambit',
+//         author: 'jill111',
+//         cols: 2,
+//         featured: true,
+//     },
+//     {
+//         img: 'images/spy.jpg',
+//         title: 'The Spy',
+//         author: 'director90',
+//     },
+//     {
+//         img: 'images/suits.jpg',
+//         title: 'Suits',
+//         author: 'Danson67',
+//     },
+//     {
+//         img: 'images/Vikings.jpeg',
+//         title: 'Vikings',
+//         author: 'fancycrave1',
+//         featured: true,
+//     }
+// ];
 export default function LandingPage() {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
-            <GridList cellHeight={200} spacing={1}>
+            <Typography variant="h1" component="h2" gutterBottom>
+                Home
+            </Typography>
+
+            {/* <GridList cellHeight={200} spacing={1}>
                 {tileData.map((tile) => (
                     <GridListTile key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
                         <img src={tile.img} alt={tile.title} />
@@ -77,7 +77,7 @@ export default function LandingPage() {
                         />
                     </GridListTile>
                 ))}
-            </GridList>
+            </GridList> */}
         </div>
     );
 }
